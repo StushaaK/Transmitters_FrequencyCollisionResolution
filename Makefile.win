@@ -1,0 +1,9 @@
+BIN = freq.exe
+OBJ = collision_graph.o stack.o vector.o main.o
+
+.c.obj:
+	cl $< /c
+
+$(BIN): $(OBJ)
+	cl $(OBJ) /Fe$(BIN) -lm
+
